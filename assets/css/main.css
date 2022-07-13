@@ -4,3 +4,22 @@
     --light-gray:#F1F3F5;
     --white: #fff; 
 }
+/*---- COMPONENTS ----*/
+.btn_primary{
+    background-color: var(--acent);
+    color: var(--white);
+    text-decoration: none;
+}
+/*---- END COMPONENTS ----*/
+body{
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smooth:antialiased;
+}
+nav{
+    background-image: linear-gradient(267deg, #283037 0%, #191D21 74%);
+}
+nav ul li a{
+    color: var(--white);
+    text-decoration: none;
+}
