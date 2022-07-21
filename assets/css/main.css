@@ -78,4 +78,10 @@ nav ul li a{
     background-color: var(--darkgray);
     color: white; 
 }
-
+.general_specs {
+    border-bottom: 1px solid #2F3E4D;
+}
+.promos{
+    background-color: var(--darkgray);
+    color: var(--white);
+}
