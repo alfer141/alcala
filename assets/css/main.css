@@ -10,6 +10,16 @@
     color: var(--white);
     text-decoration: none;
 }
+.btn_outline{
+    color: var(--white);
+    border: 2px solid var(--acent);
+    text-decoration: none;
+    border-radius: .2rem;
+}
+.link_acent{
+    color: var(--acent);
+    text-decoration: none;
+}
 /*---- END COMPONENTS ----*/
 body{
     font-family: 'Poppins', sans-serif;
@@ -23,3 +33,49 @@ nav ul li a{
     color: var(--white);
     text-decoration: none;
 }
+.alcala_main{
+    background-color: #283037;
+    color: var(--white);
+    min-height: 80vh;
+}
+.alcala_main h1 {
+    color: var(--acent);
+}
+.alcala_amenities{
+    background-image: linear-gradient(265deg, #283037 0%, #191D21 93%);
+    color: var(--white);
+}
+.horizontal_overflow_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+.amenitie_card{
+    min-width: 250px;
+    height: 470px;
+    border-radius: .3rem;
+    background-color: #283037;
+}
+.gallery_wrapper{
+     position: relative;
+}
+.gallery_content{
+    width: 360px;
+    background-color: var(--white);
+   position: absolute;
+   left: 4rem;
+   top: 3rem;
+}
+
+.gallery_mask{
+    width: 950px;
+    height: 550px;
+    background-color: #283037;
+}
+.model_info_wrapper{
+    background-color: var(--darkgray);
+    color: white; 
+}
+
