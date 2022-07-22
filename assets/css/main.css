@@ -1,5 +1,6 @@
 :root{
     --acent:#019B9E;
+    --gray:#3F444B;
     --darkgray: #20262D;
     --light-gray:#F1F3F5;
     --white: #fff; 
@@ -16,9 +17,18 @@
     text-decoration: none;
     border-radius: .2rem;
 }
+.btn_gray{
+    color: var(--white);
+    background-color: var(--gray);
+    text-decoration: none;
+    border-radius: .2rem;
+}
 .link_acent{
     color: var(--acent);
     text-decoration: none;
+}
+.acent{
+    color: var(--acent);
 }
 /*---- END COMPONENTS ----*/
 body{
@@ -34,12 +44,27 @@ nav ul li a{
     text-decoration: none;
 }
 .alcala_main{
+    background-image: url('/assets/images/alcala-main-bg.webp');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-color: #283037;
     color: var(--white);
-    min-height: 80vh;
+    min-height: 75vh;
 }
 .alcala_main h1 {
     color: var(--acent);
+}
+.play_btn{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 80px;
+    right:320px;
+    transition: .3s ease-in
+}
+.play_btn:hover{
+    transform: scale(1.2);
 }
 .alcala_amenities{
     background-image: linear-gradient(265deg, #283037 0%, #191D21 93%);
@@ -49,6 +74,7 @@ nav ul li a{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
@@ -57,6 +83,28 @@ nav ul li a{
     height: 470px;
     border-radius: .3rem;
     background-color: #283037;
+    position: relative;
+}
+.amenitie_card > img{
+    object-fit: cover;
+    object-position: top;
+    border-radius: .2rem;
+    width: 100%;
+    height: 100%;
+}
+.amenitie_content{
+    bottom: 1rem;
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+}
+.gradient_mask{
+    position: absolute;
+    z-index:2;
+    background-image: linear-gradient(180deg, rgba(32,66,94,0.00) 16%, #1F262D 100%);
+    width: 100%;
+    height: 100%;
 }
 .gallery_wrapper{
      position: relative;
@@ -64,11 +112,10 @@ nav ul li a{
 .gallery_content{
     width: 360px;
     background-color: var(--white);
-   position: absolute;
-   left: 4rem;
-   top: 3rem;
+    position: absolute;
+    left: 4rem;
+    top: 3rem;
 }
-
 .gallery_mask{
     width: 950px;
     height: 550px;
@@ -83,5 +130,20 @@ nav ul li a{
 }
 .promos{
     background-color: var(--darkgray);
+    color: var(--white);
+}
+.promo_mask{
+    width: 915px;
+    height: 435px;
+    border-radius: .5rem;
+    background-color: #2F3E4D;
+
+}
+.contact{
+    background-color: var(--light-gray);
+    color: var(--darkgray);
+}
+footer{
+    background-color: #2F3E4D;
     color: var(--white);
 }

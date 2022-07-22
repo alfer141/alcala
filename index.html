@@ -25,6 +25,7 @@
        
     </head>
     <body>
+        
         <nav>
             <div class="mw8 center ph0-ns ph3 pv2">
                 <div class="flex flex-wrap justify-between items-center">
@@ -48,14 +49,17 @@
             </div>
         </nav>
 
-        <main class="alcala_main pv5-ns ">
-            <div class="mw8 center ph0-ns ph3">
+        <main class="alcala_main pv5-ns relative">
+            <div class="mw8 center ph0-ns ph3 relative">
                 <div class="w-50-ns w-100">
                     <h1 class="f4 fw6">La mejor plusvalía</h1>
                     <h2 class="f1 mv0 pv0">En el hogar perfecto para ti y tu familia</h2>
                     <p class="lh-copy">Lo más importante para nosotros es ayudarte a formar el hogar que siempre soñaste, en donde tú y tu familia se sientan seguros, cómodos y libres con los espacios necesarios para disfrutar momentos inolvidables, ven y conoce nuestro nuevo estilo ubicado en una de las zonas con mayor plusvalía</p>
                     <a class="btn_outline pa3 dib mt3" href="">Conocer más</a>
                 </div>
+                <button class="play_btn">
+                    <img class="" src="/assets/images/play_btn.svg" alt="">
+                </button>
                 
             </div>
         </main>
@@ -63,16 +67,52 @@
         <section class="alcala_amenities pv5-ns pv4">
             <div class="flex flex-wrap">
                 <div class="w-40-ns w-100 ph5">
-                    <h2>Increíbles amenidades</h2>
+                    <h2 class="f2">Increíbles amenidades</h2>
                     <p class="lh-copy">Contamos con amenidades inspiradas y pensadas en ti, que te acercaran a la convivencia, desarrollo y esparcimiento, para que tú y tus seres queridos disfruten al máximo sus días.</p>
                     <a class="link_acent" href="">Conocer modelos</a>
                 </div>
                 <div class="w-60-ns w-100 pl4">
                     <div class="horizontal_overflow_wrapper ">
-                        <div class="amenitie_card mr3"></div>
-                        <div class="amenitie_card mr3"></div>
-                        <div class="amenitie_card mr3"></div>
-                        <div class="amenitie_card mr3"></div>
+                        <div class="amenitie_card mr3 tc">
+                            <div class="amenitie_content tc">
+                                <img src="/assets/images/amenities/icon_house.svg" alt="">
+                                <h3 class="f3 mt1">Casa club</h3>
+                            </div>
+                            <div class="gradient_mask"></div>
+                            <img src="/assets/images/amenities/clubhouse_bg.webp" alt="" />
+                            
+                           
+                        </div>
+                        <div class="amenitie_card mr3">
+                            <div class="amenitie_content tc">
+                                <img src="/assets/images/amenities/icon_dog.svg" alt="">
+                                <h3 class="f3 mt1">Dog Park</h3>
+                            </div>
+                            <div class="gradient_mask"></div>
+                            
+                            <img src="/assets/images/amenities//dogpark_bg.webp" alt="" />
+                           
+                            
+                        </div>
+                        <div class="amenitie_card mr3">
+                            <div class="amenitie_content tc">
+                                <img src="/assets/images/amenities/icon_garden.svg" alt="">
+                                <h3 class="f3 mt1">Jardines</h3>
+                            </div>
+                            <div class="gradient_mask"></div>
+                            <img src="/assets/images/amenities/parks_bg.webp" alt="" />
+                            
+                            
+                        </div>
+                        <div class="amenitie_card mr3">
+                            <div class="amenitie_content tc">
+                                <img src="/assets/images/amenities/icon_sports.svg" alt="">
+                                <h3 class="f3 mt1">Casa club</h3>
+                            </div>
+                            <div class="gradient_mask"></div>
+                            <img src="/assets/images/amenities/running_bg.webp" alt="" />
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,104 +146,438 @@
                 </div>
 
                 <div class="tab_wrapper flex flex-wrap justify-center mv4">
-                    <button>Modelo Olivenza</button>
-                    <button>Modelo Montesino</button>
-                    <button>Modelo Pontevel</button>
-                    <button>Modelo Scordia</button>
+                    <button class="tablink" onclick="openCity(event,'olivenza')">Modelo Olivenza</button>
+                    <button class="tablink" onclick="openCity(event,'montesino')">Modelo Montesino</button>
+                    <button class="tablink" onclick="openCity(event,'pontevel')">Modelo Pontevel</button>
+                    <button class="tablink" onclick="openCity(event,'scordia')">Modelo Scordia</button>
                 </div>
             </div>
-                <div class="flex flex-wrap">
-                    <div class="w-50-ns w-100">
-                        <img src="/assets/images/planes.webp" alt="">
+
+            <div class="flex flex-wrap" id="montesino">
+                <div class="w-50-ns w-100">
+                    <img src="/assets/images/planes.webp" alt="">
+                </div>
+                <div class="w-50-ns w-100 model_info_wrapper pa5">
+                    <span>Conoce el</span>
+                    <h2 class="f1 mv1">Modelo Montesino</h2>
+                    <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
+                    <h3>Aspectos generales</h3>
+                    <div class="flex flex-wrap justify-start general_specs pb2 f6">
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/land_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Terreno</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/build_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Construcción</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/garage_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Estacionamientos</li>
+                                <li>2</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="w-50-ns w-100 model_info_wrapper pa5">
-                        <span>Conoce el</span>
-                        <h2 class="f1 mv1">Modelo Montesino</h2>
-                        <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
-                        <h3>Aspectos generales</h3>
-                        <div class="flex flex-wrap justify-start general_specs pb2 f6">
-                            <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                <img src="/assets/images/land_icon.svg" alt="">
-                                <ul class="list pl2">
-                                    <li class="mb1">Terreno</li>
-                                    <li>250 Mts</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                <img src="/assets/images/build_icon.svg" alt="">
-                                <ul class="list pl2">
-                                    <li class="mb1">Construcción</li>
-                                    <li>250 Mts</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                <img src="/assets/images/garage_icon.svg" alt="">
-                                <ul class="list pl2">
-                                    <li class="mb1">Estacionamientos</li>
-                                    <li>2</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap">
-                            <div class="w-100">
-                                <h3 class="mb2">Planta Baja</h3>
-                                <div class="flex flex-wrap justify-start">
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/living_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">Sala</li>
-                                           
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/dinning_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">Comedor</li>
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/kitchen_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">Cocina</li>
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/bath_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">1/2 baño</li>
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/garden_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">Patio trasero</li>
-                                            
-                                        </ul>
-                                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Baja</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/living_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Sala</li>
+                                        
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="w-100">
-                                <h3 class="mb2">Planta Alta</h3>
-                                <div class="flex flex-wrap justify-start">
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/bedroom_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">3 Recamaras</li>
-                                        </ul>
-                                    </div>
-                                    <div class="flex flex-wrap items-center w-auto pr3-ns">
-                                        <img src="/assets/images/bath_icon.svg" alt="">
-                                        <ul class="list pl2">
-                                            <li class="mb1">2 Baños</li>
-                                        </ul>
-                                    </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/dinning_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Comedor</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/kitchen_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Cocina</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">1/2 baño</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/garden_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Patio trasero</li>
+                                        
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Alta</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bedroom_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">3 Recamaras</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">2 Baños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price pv3">
+                        <span class="db mb2">Es tuya por sólo</span>
+                        <h3 class="mv0 f1">$1,940,000</h3>
+                    </div>
+                    <div class="c2a_wrapper flex flex-wrap justify-start">
+                        <a class="btn_primary pa3 mr3 mb3" href=""> Agenda tu visita</a>
+                        <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
+                        <a class="btn_gray pa3 mr3" href="">Recorrido 360º</a>
+                    </div>
+                    <div class="mv3">
+                        <a class="white" href="">Descarga la ficha técnica en PDF</a>
+                        <p>*Las medidas de construcción y de terreno son promedio y pueden variar según su
+                            ubicación. Las imágenes son ilustrativas.</p>
                     </div>
                 </div>
+            </div>
+            <!--
+            <div class="flex flex-wrap city" id="pontevel">
+                <div class="w-50-ns w-100">
+                    <img src="/assets/images/planes.webp" alt="">
+                </div>
+                <div class="w-50-ns w-100 model_info_wrapper pa5">
+                    <span>Conoce el</span>
+                    <h2 class="f1 mv1">Modelo Montesino</h2>
+                    <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
+                    <h3>Aspectos generales</h3>
+                    <div class="flex flex-wrap justify-start general_specs pb2 f6">
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/land_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Terreno</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/build_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Construcción</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/garage_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Estacionamientos</li>
+                                <li>2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Baja</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/living_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Sala</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/dinning_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Comedor</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/kitchen_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Cocina</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">1/2 baño</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/garden_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Patio trasero</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Alta</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bedroom_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">3 Recamaras</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">2 Baños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price pv3">
+                        <span class="db mb2">Es tuya por sólo</span>
+                        <h3 class="mv0 f1">$1,940,000</h3>
+                    </div>
+                    <div class="c2a_wrapper flex flex-wrap justify-start">
+                        <a class="btn_primary pa3 mr3 mb3" href=""> Agenda tu visita</a>
+                        <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
+                        <a class="btn_gray pa3 mr3" href="">Recorrido 360º</a>
+                    </div>
+                    <div class="mv3">
+                        <a class="white" href="">Descarga la ficha técnica en PDF</a>
+                        <p>*Las medidas de construcción y de terreno son promedio y pueden variar según su
+                            ubicación. Las imágenes son ilustrativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap city" id="olivenza">
+                <div class="w-50-ns w-100">
+                    <img src="/assets/images/planes.webp" alt="">
+                </div>
+                <div class="w-50-ns w-100 model_info_wrapper pa5">
+                    <span>Conoce el</span>
+                    <h2 class="f1 mv1">Modelo Montesino</h2>
+                    <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
+                    <h3>Aspectos generales</h3>
+                    <div class="flex flex-wrap justify-start general_specs pb2 f6">
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/land_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Terreno</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/build_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Construcción</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/garage_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Estacionamientos</li>
+                                <li>2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Baja</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/living_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Sala</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/dinning_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Comedor</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/kitchen_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Cocina</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">1/2 baño</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/garden_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Patio trasero</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Alta</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bedroom_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">3 Recamaras</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">2 Baños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price pv3">
+                        <span class="db mb2">Es tuya por sólo</span>
+                        <h3 class="mv0 f1">$1,940,000</h3>
+                    </div>
+                    <div class="c2a_wrapper flex flex-wrap justify-start">
+                        <a class="btn_primary pa3 mr3 mb3" href=""> Agenda tu visita</a>
+                        <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
+                        <a class="btn_gray pa3 mr3" href="">Recorrido 360º</a>
+                    </div>
+                    <div class="mv3">
+                        <a class="white" href="">Descarga la ficha técnica en PDF</a>
+                        <p>*Las medidas de construcción y de terreno son promedio y pueden variar según su
+                            ubicación. Las imágenes son ilustrativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap city" id="scordia">
+                <div class="w-50-ns w-100">
+                    <img src="/assets/images/planes.webp" alt="">
+                </div>
+                <div class="w-50-ns w-100 model_info_wrapper pa5">
+                    <span>Conoce el</span>
+                    <h2 class="f1 mv1">Modelo Montesino</h2>
+                    <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
+                    <h3>Aspectos generales</h3>
+                    <div class="flex flex-wrap justify-start general_specs pb2 f6">
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/land_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Terreno</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/build_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Construcción</li>
+                                <li>250 Mts</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap items-center w-auto pr3-ns">
+                            <img src="/assets/images/garage_icon.svg" alt="">
+                            <ul class="list pl2">
+                                <li class="mb1">Estacionamientos</li>
+                                <li>2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Baja</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/living_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Sala</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/dinning_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Comedor</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/kitchen_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Cocina</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">1/2 baño</li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/garden_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">Patio trasero</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <h3 class="mb2">Planta Alta</h3>
+                            <div class="flex flex-wrap justify-start">
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bedroom_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">3 Recamaras</li>
+                                    </ul>
+                                </div>
+                                <div class="flex flex-wrap items-center w-auto pr3-ns">
+                                    <img src="/assets/images/bath_icon.svg" alt="">
+                                    <ul class="list pl2">
+                                        <li class="mb1">2 Baños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price pv3">
+                        <span class="db mb2">Es tuya por sólo</span>
+                        <h3 class="mv0 f1">$1,940,000</h3>
+                    </div>
+                    <div class="c2a_wrapper flex flex-wrap justify-start">
+                        <a class="btn_primary pa3 mr3 mb3" href=""> Agenda tu visita</a>
+                        <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
+                        <a class="btn_gray pa3 mr3" href="">Recorrido 360º</a>
+                    </div>
+                    <div class="mv3">
+                        <a class="white" href="">Descarga la ficha técnica en PDF</a>
+                        <p>*Las medidas de construcción y de terreno son promedio y pueden variar según su
+                            ubicación. Las imágenes son ilustrativas.</p>
+                    </div>
+                </div>
+            </div>>-->
            
         </section>
 
@@ -212,9 +586,60 @@
                 <div class="w-60-ns center ph0 tc">
                     <span>Promociones</span>
                     <h2 class="f1 mt0">No te puedes perder las promos del mes 🔥</h2>
+                    
                 </div>
-               
+                <div class="promo_mask center"></div>
             </div>
         </section>
+
+        <section class="contact pv5-ns pv3">
+            <div class="mw8 center ph0-ns ph3">
+                <div class="flex flex-wrap-reverse">
+                    <div class="w-50-ns w-100">
+
+                    </div>
+                    <div class="w-50-ns w-100">
+                        <h2 class="f5 mb0">Real alcala Ubicación</h2>
+                        <h3 class="f1 mv0">Una ubicación <br>con <span class="acent">la mejor plusvalía</span> <h3>
+                        <p class="lh-copy fw6">Av. Real del Sol, Mz 16 Lote 1, Real del Sol, Ojo de Agua, 55770 Tecámac, México.</p>
+                        <div class="flex flex-wrap">
+                            <div class="w-50-ns w-100">
+                                <a class="db" href=""> Vamos con Waze</a>
+                                <a class="db" href="">Vamos con Google</a>
+                                <h3>Llámanos a</h3>
+                                <a href="">55 5010 7308</a>
+                                <a href="">Contacta a un Asesor</a>
+                                <h3>Visíta nuestras redes</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="w-50-ns w-100">
+                                <h3 class="mv0">Agenda una visita</h3>
+                                <form action="">
+                                    <div>
+                                        <label for="">Nombre</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div>
+                                        <label for="">Correo electrónico</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div>
+                                        <label for="">Número de contacto</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                    <div>
+                                        <label for="">Elige una fecha para tu visita</label>
+                                        <input type="date" name="" id="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="pv2 tc"> Todos los derechos reservados</footer>
     </body>
 </html>
