@@ -27,6 +27,22 @@
     text-decoration: none;
     border-radius: .2rem;
 }
+.btn_waze{
+    background-color: #2D3741;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: .2rem;
+}
+.btn_google{
+    background-color: var(--white);
+    color:var(--darkgray);
+    text-decoration: none;
+    border-radius: .2rem;
+}
+.link_secondary{
+    color: var(--darkgray);
+    text-decoration: none;
+}
 .link_acent{
     color: var(--acent);
     text-decoration: none;
@@ -223,8 +239,28 @@ nav ul li a{
     background-color: var(--light-gray);
     color: var(--darkgray);
 }
-.contact_form{
+.form_card{
     background-color: #fff;
+}
+.form_card input{
+    border: 2px solid #E2E2E2;
+    border-radius: .2rem;
+    background-color: var(--white);
+}
+.form_card form {
+    margin: 0 auto;
+    width: 100%;
+}
+.form_card label{
+    font-size: 16px;
+    display: block;
+    color: #7B7B7B;
+    font-weight: 600;
+    margin-bottom: .375rem;
+}
+.submit_btn {
+    outline: none;
+    border: none;
 }
 footer{
     background-color: #2F3E4D;
