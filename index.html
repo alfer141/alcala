@@ -21,10 +21,22 @@
         <link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
         <link rel="canonical" href="https://realalcala.com/" />
         <link rel="stylesheet" href="/assets/css/tachyons.css">
+        <link rel="stylesheet" href="/assets/css/splide.min.css">
         <link rel="stylesheet" href="/assets/css/main.css">
-       
+        <script src="/assets/js/splide.min.js"></script>
+        
+
     </head>
     <body>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
         <div class="mw16 relative">
             <div class="whatsapp_float_btn">
                 <img src="/assets/images/whatsapp.svg" alt="">
@@ -61,7 +73,7 @@
                         <p class="lh-copy">Lo más importante para nosotros es ayudarte a formar el hogar que siempre soñaste, en donde tú y tu familia se sientan seguros, cómodos y libres con los espacios necesarios para disfrutar momentos inolvidables, ven y conoce nuestro nuevo estilo ubicado en una de las zonas con mayor plusvalía</p>
                         <a class="btn_outline pa3 dib mt3" href="">Conocer más</a>
                     </div>
-                    <button class="play_btn">
+                    <button  class="play_btn video-btn" id="myBtn">
                         <img class="" src="/assets/images/play_btn.svg" alt="">
                     </button>
                     
@@ -134,8 +146,26 @@
                             </div>
                         </div>
                         <div class="w-80-ns w-100 ">
+                            <div class="splide bg-red white">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <div class="gallery_mask w-80"></div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="gallery_mask w-80"></div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="gallery_mask w-80"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                 <!-- Add the progress bar element -->
+                                <div class="my-slider-progress">
+                                    <div class="my-slider-progress-bar"></div>
+                                </div>
+                            </div>
                             
-                            <div class="gallery_mask w-80"></div>
                         </div>
                         
                     </div>
@@ -680,8 +710,54 @@
                 
                 // Get the element with id="defaultOpen" and click on it
                 document.getElementById("defaultOpen").click();
-            </script>
 
+                new Splide( '.splide', {
+                    type   : 'loop',
+                } ).mount();
+                var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+
+                // Update the bar width:
+                splide.on( 'mounted move', function () {
+                    var end = splide.Components.Controller.getEnd() + 1;
+                    bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+                } );
+            </script>
+            <script>
+                $(document).ready(function() {
+
+                    // Gets the video src from the data-src on each button
+                    
+                    var $videoSrc;  
+                    $('.video-btn').click(function() {
+                        $videoSrc = $(this).data( "src" );
+                    });
+                    console.log($videoSrc);
+                    
+                      
+                      
+                    // when the modal is opened autoplay it  
+                    $('#myModal').on('shown.bs.modal', function (e) {
+                        
+                    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+                    $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+                    })
+                      
+                    
+                    // stop playing the youtube video when I close the modal
+                    $('#myModal').on('hide.bs.modal', function (e) {
+                        // a poor man's stop video
+                        $("#video").attr('src',$videoSrc); 
+                    }) 
+                        
+                        
+                    
+                    
+                      
+                      
+                    // document ready  
+                    });
+            </script>
+            <script src="/assets/js/modal.js"></script>
             <footer class="pv2 tc"> Todos los derechos reservados</footer>
         </div>
     </body>
