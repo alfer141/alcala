@@ -5,6 +5,14 @@
     --light-gray:#F1F3F5;
     --white: #fff; 
 }
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -58,12 +66,24 @@
     color: var(--white);
     text-decoration: none;
     border-radius: .2rem;
+    transition: .2s ease-in;
+}
+.btn_waze:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 12px 32px 0 rgba(0,0,0,0.12);
+
+}
+.btn_google:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 12px 32px 0 rgba(0,0,0,0.12);
+
 }
 .btn_google{
     background-color: var(--white);
     color:var(--darkgray);
     text-decoration: none;
     border-radius: .2rem;
+    transition: .2s ease-in;
 }
 .link_secondary{
     color: var(--darkgray);
@@ -72,6 +92,10 @@
 .link_acent{
     color: var(--acent);
     text-decoration: none;
+    transition: .2s ease;
+}
+.link_acent:hover{
+    text-decoration: underline;
 }
 .acent{
     color: var(--acent);

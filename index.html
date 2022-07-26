@@ -23,10 +23,10 @@
         <link rel="stylesheet" href="/assets/css/tachyons.css">
         <link rel="stylesheet" href="/assets/css/splide.min.css">
         <link rel="stylesheet" href="/assets/css/main.css">
-        <script src="/assets/js/splide.min.js"></script>
-        <script src="https://kit.fontawesome.com/d47a0705ca.js" crossorigin="anonymous"></script>
-
-        <script src="https://fast.wistia.com/embed/medias/3qopi37s16.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+        <script src="/assets/js/splide.min.js" ></script>
+        <script src="https://kit.fontawesome.com/d47a0705ca.js" crossorigin="anonymous" async></script>
+        <script src="https://fast.wistia.com/embed/medias/3qopi37s16.jsonp" async></script>
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
@@ -49,12 +49,12 @@
                                 <img class="w-70" src="/assets/images/logo_alcala.webp" alt="">
                             </a>
                             <ul class="list pl0 dib">
-                                <li class="dib pr2"><a href="">Amenidades</a></li>
-                                <li class="dib pr2"><a href="">Galeria</a></li>
-                                <li class="dib pr2"><a href="">Modelos</a></li>
-                                <li class="dib pr2"><a href="">Promociones</a></li>
-                                <li class="dib pr2"><a href="">Ubicación</a></li>
-                                <li class="dib pr2"><a href="">Blog</a></li>
+                                <li class="dib pr2"><a class="dim" href="#amenidades">Amenidades</a></li>
+                                <li class="dib pr2"><a class="dim" href="#galeria">Galeria</a></li>
+                                <li class="dib pr2"><a class="dim" href="#modelos">Modelos</a></li>
+                                <li class="dib pr2"><a class="dim" href="#promociones">Promociones</a></li>
+                                <li class="dib pr2"><a class="dim" href="#contacto">Ubicación</a></li>
+                                <li class="dib pr2"><a class="dim" href="">Blog</a></li>
                             </ul>
                         </div>
                         <div>
@@ -73,23 +73,23 @@
                         <h1 class="f4 fw6">La mejor plusvalía</h1>
                         <h2 class="f1 mv0 pv0">En el hogar perfecto para ti y tu familia</h2>
                         <p class="lh-copy">Lo más importante para nosotros es ayudarte a formar el hogar que siempre soñaste, en donde tú y tu familia se sientan seguros, cómodos y libres con los espacios necesarios para disfrutar momentos inolvidables, ven y conoce nuestro nuevo estilo ubicado en una de las zonas con mayor plusvalía</p>
-                        <a class="btn_outline pa3 dib mt3" href="">Conocer más <i class="fa-solid fa-angle-right"></i></a>
+                        <a class="btn_outline pa3 dib mt3" href="#amenidades">Conocer más <i class="fa-solid fa-angle-right"></i></a>
                     </div>
  
-                    <span  class="play_btn wistia_embed wistia_async_1jctk407ek popover=true popoverAnimateThumbnail=true popoverContent=link" >
-                        <img class="" src="/assets/images/play_btn.svg" alt="">
+                    <span  class="play_btn wistia_embed wistia_async_1jctk407ek popover=true popoverAnimateThumbnail=true popoverContent=link " >
+                        <img class="pointer" src="/assets/images/play_btn.svg" alt="">
                     </span>
                 
                     
                 </div>
             </main>
 
-            <section class="alcala_amenities pv5-ns pv4">
+            <section class="alcala_amenities pv5-ns pv4" id="amenidades">
                 <div class="flex flex-wrap">
                     <div class="w-40-ns w-100 ph5">
                         <h2 class="f2">Increíbles amenidades</h2>
                         <p class="lh-copy">Contamos con amenidades inspiradas y pensadas en ti, que te acercaran a la convivencia, desarrollo y esparcimiento, para que tú y tus seres queridos disfruten al máximo sus días.</p>
-                        <a class="link_acent" href="">Conocer modelos <i class="fa-solid fa-angle-right"></i></a>
+                        <a class="link_acent" href="#modelos">Conocer modelos <i class="fa-solid fa-angle-right"></i></a>
                     </div>
                     <div class="w-60-ns w-100 pl4">
                         <div class="horizontal_overflow_wrapper ">
@@ -138,7 +138,7 @@
                 </div>
             </section>
 
-            <section class="gallery pv5-ns pv3">
+            <section class="gallery pv5-ns pv3" id="galeria">
                 <div class="mw8 center ph0-ns ph3 ">
                     <div class=" flex flex-wrap">
                         <div class="w-20-ns gallery_wrapper">
@@ -212,7 +212,7 @@
                 </div>
             </section>
 
-            <section class="models pv5-ns pv3">
+            <section class="models pv5-ns pv3" id="modelos">
                 <div class="mw8 center ph0-ns ph3">
                     <div class="tc">
                         <h2 class="f5">Modelos de casa en Alcalá</h2>
@@ -670,7 +670,7 @@
 
             </section>
 
-            <section class="promos pv5-ns pv3" id="">
+            <section class="promos pv5-ns pv3" id="promociones">
                 <div class="mw8 center ph3 ph0-ns">
                     <div class="w-60-ns center ph0 tc">
                         <span class="acent">Promociones</span>
@@ -702,7 +702,7 @@
                 </div>
             </section>
             
-            <section class="contact pv5-ns pv3">
+            <section class="contact pv5-ns pv3" id="contacto">
                 <div class="mw8 center ph0-ns ph3">
                     <div class="flex flex-wrap-reverse">
                         <div class="w-40-ns w-100 pr4-ns">
@@ -716,6 +716,7 @@
                                 
                                 <img src="/assets/images/location_bg.webp" alt="">
                             </div>
+                            <span class="label ph4 pv2 dib white fw6 tc mv3">Mapa</span>
                             <div class="mapbox">
                                 <div id="map"></div>
                             </div>
@@ -723,28 +724,31 @@
                         <div class="w-60-ns w-100 pl4-ns">
                             <h2 class="f5 mb0">Real alcala Ubicación</h2>
                             <h3 class="f1 mv0">Una ubicación <br>con <span class="acent">la mejor plusvalía</span> <h3>
-                            <p class="lh-copy fw6">Av. Real del Sol, Mz 16 Lote 1, Real del Sol, Ojo de Agua, 55770 Tecámac, México.</p>
+                            <p class="lh-copy fw6 f5"><i class="fa-solid fa-location-dot"></i> Av. Real del Sol, Mz 16 Lote 1, Real del Sol, Ojo de Agua, 55770 Tecámac, México.</p>
                             <div class="flex flex-wrap">
                                 <div class="w-40-ns w-100 pr4-ns">
-                                    <a class="db btn_waze pv3 mb3 tc" href="">
-                                        <img src="/assets/images/waze.png" alt=""> Vamos con Waze</a>
-                                    <a class="db btn_google pv3 mb3 tc" href="">
+                                    <a class="db btn_waze pv3 mb3 tc flex items-center ph2 f5 justify-center" href="">
+                                        <img  src="/assets/images/waze.png" alt=""> 
+                                        Vamos con Waze
+                                        
+                                    </a>
+                                    <a class="db btn_google pv3 mb3 flex items-center ph2 f5 justify-center" href="">
                                         <img src="/assets/images/maps.png" alt=""> Vamos con Google</a>
                                     <h3 class="mb0">Llámanos a</h3>
                                     <a class="db link_secondary f4 mt2" href=""><i class="fa-solid fa-phone"></i> 55 5010 7308</a>
-                                    <a class="link_acent db mt2" href=""><i class="fa-brands fa-whatsapp"></i> Contacta a un Asesor</a>
+                                    <a class="link_acent db mt3" href=""><i class="fa-brands fa-whatsapp"></i> Contacta a un Asesor</a>
                                     <h3 class="f4">Visita nuestras redes</h3>
                                     <ul class="list pl0">
-                                        <li class="dib"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li class="dib"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
-                                        <li class="dib"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                                        <li class="dib"><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                                        <li class="dib"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li class="dib"><a class="link_secondary dim f4 pa2" href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li class="dib"><a class="link_secondary dim f4 pa2" href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                                        <li class="dib"><a class="link_secondary dim f4 pa2" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li class="dib"><a class="link_secondary dim f4 pa2" href=""><i class="fa-brands fa-youtube"></i></a></li>
+                                        <li class="dib"><a class="link_secondary dim f4 pa2" href=""><i class="fa-brands fa-linkedin"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="w-60-ns w-100">
                                     <div class="form_card ph4 pv3 w-90 center">
-                                        <h3 class="mt0 tc f5 mb3 pt3">Agenda una visita</h3>
+                                        <h3 class="mt0 tc f4 mb3 pt3">Agenda una visita</h3>
                                         <form cl action="">
                                             <div class="mb2 pb2">
                                                 <label for="">Nombre</label>
@@ -760,7 +764,7 @@
                                             </div>
                                             <div class="mb2 pb2">
                                                 <label for="">Elige una fecha para tu visita</label>
-                                                <input class="pv2 w-100"  type="date" name="" id="">
+                                                <input class="pv2 ph3 db w-90"  type="date" name="" id="">
                                             </div>
                                             <button class="pv3 w-100 btn_primary submit_btn" type="submit">Enviar mensaje</button>
                                         </form>
@@ -771,6 +775,8 @@
                     </div>
                 </div>
             </section>
+
+            <footer class="pv2 tc"> Todos los derechos reservados a realalcala.com® 2022</footer>
             <!-- SCRIPTS -->
             <script>
                 function openModel(evt, modelName) {
@@ -798,6 +804,7 @@
                     padding: '9%',
                 } ).mount();
             </script>
+            <!-- SCRIPTS -->
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoiYWxmZXIxNDEiLCJhIjoiY2w2Mm5qbDQ4MGdsOTNpcGY5aDdxZGNpdiJ9.3kIZx93netrB9VHARQrr0g';
                 const map = new mapboxgl.Map({
@@ -862,7 +869,7 @@
             </script>
 
             <script src="https://fast.wistia.com/embed/medias/1jctk407ek.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-            <footer class="pv2 tc"> Todos los derechos reservados</footer>
+            
         </div>
 
     
