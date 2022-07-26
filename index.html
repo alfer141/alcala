@@ -25,9 +25,15 @@
         <link rel="stylesheet" href="/assets/css/main.css">
         <script src="/assets/js/splide.min.js"></script>
         
+        <script src="https://fast.wistia.com/embed/medias/3qopi37s16.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
     </head>
     <body>
+        <style>
+            #map { position: absolute; top: 0; bottom: 0; width: 100%; border-radius: .5rem; border:3px solid white; }
+        </style>
         <div class="mw16 relative">
             <div class="whatsapp_float_btn">
                 <img src="/assets/images/whatsapp.svg" alt="">
@@ -140,7 +146,7 @@
                             </div>
                         </div>
                         <div class="w-80-ns w-100 ">
-                            <div class="splide bg-red white">
+                            <div class="splide  white">
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
@@ -667,17 +673,49 @@
                         <h2 class="f1 mt0">No te puedes perder las promos del mes 🔥</h2>
                         
                     </div>
-                    <div class="promo_mask center"></div>
+                    <div class="splide" id="slider2">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <div class="promo_mask center">
+                                        <img src="/assets/images/promos/efectivo.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="promo_mask center">
+                                        <img src="/assets/images/promos/nino.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <div class="promo_mask center"></div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    
                 </div>
             </section>
-
+            
             <section class="contact pv5-ns pv3">
                 <div class="mw8 center ph0-ns ph3">
                     <div class="flex flex-wrap-reverse">
-                        <div class="w-40-ns w-100">
-
+                        <div class="w-40-ns w-100 pr4-ns">
+                            <span class="label ph4 pv2 dib white fw6 tc">Video Ubicación</span>
+                            <div class="location_video relative">
+                                
+                                <span class="grow wistia_embed wistia_async_3qopi37s16 popover=true popoverAnimateThumbnail=true popoverContent=link vlocation-btn">
+                                    <a class="grow" href="#"><img class=" center play_location " src="/assets/images/simple_play.svg" alt="" /></a>
+                                </span>
+                                
+                                <img src="/assets/images/location_bg.webp" alt="">
+                            </div>
+                            <div class="mapbox">
+                                <div id="map"></div>
+                            </div>
                         </div>
-                        <div class="w-60-ns w-100">
+                        <div class="w-60-ns w-100 pl4-ns">
                             <h2 class="f5 mb0">Real alcala Ubicación</h2>
                             <h3 class="f1 mv0">Una ubicación <br>con <span class="acent">la mejor plusvalía</span> <h3>
                             <p class="lh-copy fw6">Av. Real del Sol, Mz 16 Lote 1, Real del Sol, Ojo de Agua, 55770 Tecámac, México.</p>
@@ -744,17 +782,79 @@
                 new Splide( '.splide', {
                     type   : 'loop',
                 } ).mount();
-                var bar    = splide.root.querySelector( '.my-slider-progress-bar' );
-
-                // Update the bar width:
-                splide.on( 'mounted move', function () {
-                    var end = splide.Components.Controller.getEnd() + 1;
-                    bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
-                } );
+                new Splide( '#slider2', {
+                    type   : 'loop',
+                    padding: '9%',
+                } ).mount();
+            </script>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoiYWxmZXIxNDEiLCJhIjoiY2w2Mm5qbDQ4MGdsOTNpcGY5aDdxZGNpdiJ9.3kIZx93netrB9VHARQrr0g';
+                const map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/light-v10',
+                    center: [-99, 19.6],
+                    zoom: 8.5
+                });
+            
+                map.on('load', () => {
+                    // Add an image to use as a custom marker
+                    map.loadImage(
+                        'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                        (error, image) => {
+                            if (error) throw error;
+                            map.addImage('custom-marker', image);
+                            // Add a GeoJSON source with 2 points
+                            map.addSource('points', {
+                                'type': 'geojson',
+                                'data': {
+                                    'type': 'FeatureCollection',
+                                    'features': [
+                                        {
+                                            // feature for Mapbox DC
+                                            'type': 'Feature',
+                                            'geometry': {
+                                                'type': 'Point',
+                                                'coordinates': [-99.01673562705349, 19.65838132739431
+                                                ]
+                                            },
+                                            'properties': {
+                                                'title': 'Real Alcalá'
+                                            }
+                                        },
+                                        
+                                        
+                                    ]
+                                }
+                            });
+            
+                            // Add a symbol layer
+                            map.addLayer({
+                                'id': 'points',
+                                'type': 'symbol',
+                                'source': 'points',
+                                'layout': {
+                                    'icon-image': 'custom-marker',
+                                    // get the title name from the source's "title" property
+                                    'text-field': ['get', 'title'],
+                                    'text-font': [
+                                        'Open Sans Semibold',
+                                        'Arial Unicode MS Bold'
+                                    ],
+                                    'text-offset': [0, 1.25],
+                                    'text-anchor': 'top'
+                                }
+                            });
+                        }
+                    );
+                });
+            
             </script>
 
             <script src="https://fast.wistia.com/embed/medias/1jctk407ek.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
             <footer class="pv2 tc"> Todos los derechos reservados</footer>
         </div>
-    </body>
+
+    
+
+</body>
 </html>

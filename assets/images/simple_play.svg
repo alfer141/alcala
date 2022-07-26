@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="60px" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>play-solid (3)</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="alcala_2" transform="translate(-267.000000, -4121.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="play-solid-(3)" transform="translate(267.000000, 4121.000000)">
+                <path d="M47.0052083,24.513128 C48.8671875,25.6918951 50,27.7681325 50,30.0051108 C50,32.2420891 48.8671875,34.3183265 47.0052083,35.3765378 L9.50911458,58.9518784 C7.57942708,60.2779913 5.1640625,60.3315716 3.19270833,59.1929898 C1.22096354,58.054408 0,55.9111952 0,53.5804513 L0,6.42977024 C0,4.10438438 1.22096354,1.9598321 3.19270833,0.821250309 C5.1640625,-0.315991971 7.57942708,-0.269109191 9.50911458,0.943145536 L47.0052083,24.513128 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
