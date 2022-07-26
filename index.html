@@ -65,7 +65,7 @@
                         <p class="lh-copy">Lo más importante para nosotros es ayudarte a formar el hogar que siempre soñaste, en donde tú y tu familia se sientan seguros, cómodos y libres con los espacios necesarios para disfrutar momentos inolvidables, ven y conoce nuestro nuevo estilo ubicado en una de las zonas con mayor plusvalía</p>
                         <a class="btn_outline pa3 dib mt3" href="">Conocer más</a>
                     </div>
-                    <script src="https://fast.wistia.com/embed/medias/1jctk407ek.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+ 
                     <span  class="play_btn wistia_embed wistia_async_1jctk407ek popover=true popoverAnimateThumbnail=true popoverContent=link" >
                         <img class="" src="/assets/images/play_btn.svg" alt="">
                     </span>
@@ -752,42 +752,8 @@
                     bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
                 } );
             </script>
-            <script>
-                $(document).ready(function() {
 
-                    // Gets the video src from the data-src on each button
-                    
-                    var $videoSrc;  
-                    $('.video-btn').click(function() {
-                        $videoSrc = $(this).data( "src" );
-                    });
-                    console.log($videoSrc);
-                    
-                      
-                      
-                    // when the modal is opened autoplay it  
-                    $('#myModal').on('shown.bs.modal', function (e) {
-                        
-                    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-                    $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-                    })
-                      
-                    
-                    // stop playing the youtube video when I close the modal
-                    $('#myModal').on('hide.bs.modal', function (e) {
-                        // a poor man's stop video
-                        $("#video").attr('src',$videoSrc); 
-                    }) 
-                        
-                        
-                    
-                    
-                      
-                      
-                    // document ready  
-                    });
-            </script>
-            <script src="/assets/js/modal.js"></script>
+            <script src="https://fast.wistia.com/embed/medias/1jctk407ek.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
             <footer class="pv2 tc"> Todos los derechos reservados</footer>
         </div>
     </body>
