@@ -32,6 +32,19 @@
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
     </head>
     <body>
+        <div class="mobileNav_container " id="mobileNav">
+            
+            <div class="nav_content f3 pa4">
+                <a href="javascript:void(0)" onclick="closeNav()" class="closeNav flex items-center">&times;</a>
+                <a class="dim" href="#amenidades">Amenidades</a>
+                <a class="dim" href="#galeria">Galeria</a>
+                <a class="dim" href="#modelos">Modelos</a>
+                <a class="dim" href="#promociones">Promociones</a>
+                <a class="dim" href="#contacto">Ubicación</a>
+                <a class="dim" href="">Blog</a>
+            </div>
+        </div>
+        <!---->
         <style>
             #map { position: absolute; top: 0; bottom: 0; width: 100%; border-radius: .5rem; border:3px solid white; }
         </style>
@@ -56,12 +69,14 @@
                                 <li class="dib pr2"><a class="dim" href="#contacto">Ubicación</a></li>
                                 <li class="dib pr2"><a class="dim" href="">Blog</a></li>
                             </ul>
+                            
                         </div>
                         <div class="dib-ns dn">
                             <a class="btn_primary ph3 pv3 br1 fw6 flex items-center" href="#">
                                  <i class="fa-brands fa-whatsapp f4 pr1"></i> Agendar una cita
                             </a>
                         </div>
+                        <span class="navBtn f3 dib dn-ns" onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
                     </div>
                 </div>
             </nav>
@@ -220,13 +235,14 @@
                         <h3 class="f1-ns f2 mv0">Un estilo diseñado para ti</h3>
                     </div>
 
-                    <div class="tab_wrapper mv4">
-                        <div class="flex flex-wrap justify-center ">
-                            <button class="tablinks pv4 ph3" onclick="openModel(event, 'Olivenza')" id="defaultOpen">Olivenza</button>
-                            <button class="tablinks pv3 ph3" onclick="openModel(event, 'Montesino')">Montesino</button>
-                            <button class="tablinks pv3 ph3" onclick="openModel(event, 'Pontevel')">Pontevel</button>
-                            <button class="tablinks pv3 ph3" onclick="openModel(event, 'Scordia')">Scordia</button>
-                        </div>
+                    
+                </div>
+                <div class="tab_wrapper mv4 ph0-ns ph3 mw8 center">
+                    <div class="flex flex-wrap justify-center ">
+                        <button class="tablinks pv4 ph3" onclick="openModel(event, 'Olivenza')" id="defaultOpen">Olivenza</button>
+                        <button class="tablinks pv3 ph3" onclick="openModel(event, 'Montesino')">Montesino</button>
+                        <button class="tablinks pv3 ph3" onclick="openModel(event, 'Pontevel')">Pontevel</button>
+                        <button class="tablinks pv3 ph3" onclick="openModel(event, 'Scordia')">Scordia</button>
                     </div>
                 </div>
 
@@ -235,7 +251,7 @@
                         <div class="w-50-ns w-100">
                             <img src="/assets/images/planes.webp" alt="">
                         </div>
-                        <div class="w-50-ns w-100 model_info_wrapper pa5">
+                        <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
                             <h2 class="f1 mv1">Modelo Olivenza</h2>
                             <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
@@ -326,9 +342,9 @@
                                 <h3 class="mv0 f1">$1,940,000</h3>
                             </div>
                             <div class="c2a_wrapper flex flex-wrap justify-start">
-                                <a class="btn_primary pa3 mr3 mb3" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
-                                <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
-                                <a class="btn_gray pa3 mr3 mb3" href=""> <i class="fa-solid fa-cube"></i> Recorrido 360º</a>
+                                <a class="btn_primary pa3 mr3 mb3 w-auto-ns w-100 tc" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
+                                <a class="btn_outline pa3 mr3 mb3 w-auto-ns w-100 tc" href="">Realiza tu apartado</a>
+                                <a class="btn_gray pa3 mr3 mb3 w-auto-ns w-100 tc" href=""> <i class="fa-solid fa-cube"></i> Recorrido 360º</a>
                             </div>
                             <div class="mv3">
                                 <a class="white" href=""><i class="fa-solid fa-file-pdf"></i> Descarga la ficha técnica en PDF</a>
@@ -345,7 +361,7 @@
                         <div class="w-50-ns w-100">
                             <img src="/assets/images/planes.webp" alt="">
                         </div>
-                        <div class="w-50-ns w-100 model_info_wrapper pa5">
+                        <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
                             <h2 class="f1 mv1">Modelo Montesino</h2>
                             <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
@@ -436,9 +452,9 @@
                                 <h3 class="mv0 f1">$1,940,000</h3>
                             </div>
                             <div class="c2a_wrapper flex flex-wrap justify-start">
-                                <a class="btn_primary pa3 mr3 mb3" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
-                                <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
-                                <a class="btn_gray pa3 mr3 mb3" href=""><i class="fa-solid fa-cube"></i> Recorrido 360º</a>
+                                <a class="btn_primary pa3 mr3 mb3 w-auto-ns w-100 tc" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
+                                <a class="btn_outline pa3 mr3 mb3 w-auto-ns w-100 tc" href="">Realiza tu apartado</a>
+                                <a class="btn_gray pa3 mr3 mb3 w-auto-ns w-100 tc" href=""><i class="fa-solid fa-cube"></i> Recorrido 360º</a>
                             </div>
                             <div class="mv3">
                                 <a class="white" href=""><i class="fa-solid fa-file-pdf"></i> Descarga la ficha técnica en PDF</a>
@@ -455,7 +471,7 @@
                         <div class="w-50-ns w-100">
                             <img src="/assets/images/planes.webp" alt="">
                         </div>
-                        <div class="w-50-ns w-100 model_info_wrapper pa5">
+                        <div class="w-50-ns w-100 model_info_wrapper pa4">
                             <span class="acent">Conoce el</span>
                             <h2 class="f1 mv1">Modelo Pontevel</h2>
                             <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
@@ -564,7 +580,7 @@
                         <div class="w-50-ns w-100">
                             <img src="/assets/images/planes.webp" alt="">
                         </div>
-                        <div class="w-50-ns w-100 model_info_wrapper pa5">
+                        <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
                             <h2 class="f1 mv1">Modelo Scordia</h2>
                             <p class="lh-copy mt0">Proporciones adecuadas en dimensiones espacios y distribución, pensadas especialmente en tu familia. La puerta a las posibilidades de obtener bienestar, movilidad y conectividad</p>
@@ -655,9 +671,9 @@
                                 <h3 class="mv0 f1">$1,940,000</h3>
                             </div>
                             <div class="c2a_wrapper flex flex-wrap justify-start">
-                                <a class="btn_primary pa3 mr3 mb3" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
-                                <a class="btn_outline pa3 mr3 mb3" href="">Realiza tu apartado</a>
-                                <a class="btn_gray pa3 mr3 mb3" href=""><i class="fa-solid fa-cube"></i> Recorrido 360º</a>
+                                <a class="btn_primary pa3 mr3 mb3 w-auto-ns w-100 tc" href=""><i class="fa-solid fa-calendar"></i> Agenda tu visita</a>
+                                <a class="btn_outline pa3 mr3 mb3  w-auto-ns w-100 tc" href="">Realiza tu apartado</a>
+                                <a class="btn_gray pa3 mr3 mb3  w-auto-ns w-100 tc" href=""><i class="fa-solid fa-cube"></i> Recorrido 360º</a>
                             </div>
                             <div class="mv3">
                                 <a class="white" href=""><i class="fa-solid fa-file-pdf f5"></i> Descarga la ficha técnica en PDF</a>
@@ -748,7 +764,7 @@
                                     </ul>
                                 </div>
                                 <div class="w-60-ns w-100">
-                                    <div class="form_card ph4 pv3 w-90 center">
+                                    <div class="form_card ph4 pv3 w-90-ns w-100 center">
                                         <h3 class="mt0 tc f4 mb3 pt3">Agenda una visita</h3>
                                         <form cl action="">
                                             <div class="mb2 pb2">
@@ -800,9 +816,15 @@
                 new Splide( '.splide', {
                     type   : 'loop',
                 } ).mount();
+
                 new Splide( '#slider2', {
                     type   : 'loop',
                     padding: '9%',
+                    breakpoints: {
+                        640: {
+                            padding: '0',
+                        },
+                    }
                 } ).mount();
             </script>
             <!-- SCRIPTS -->
@@ -869,6 +891,14 @@
             
             </script>
 
+            <script>
+                function openNav(){
+                    document.getElementById('mobileNav').style.width = "100%";
+                }
+                function closeNav(){
+                    document.getElementById('mobileNav').style.width = "0%";
+                }
+            </script>
             <script src="https://fast.wistia.com/embed/medias/1jctk407ek.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
             
         </div>

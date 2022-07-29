@@ -13,6 +13,38 @@ nav{
     top: 0;
     z-index: 99999;
 }
+.navBtn{
+    color: var(--white);
+}
+.mobileNav_container{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    background-color: var(--darkgray);
+}
+.nav_content{
+    position: relative;
+    width: 100%;
+}
+.mobileNav_container a{
+    color:var(--white);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1.4rem;
+}
+.closeNav{
+    font-size: 2.5rem;
+    text-align: right;
+}
+.closeNav span{
+    font-size: 1.5rem;
+    display: inline-block;
+}
 .main_mask{
     position: absolute;
     width: 100%;
@@ -362,6 +394,9 @@ footer{
 }
 
 @media only screen and (max-width: 600px){
+    .whatsapp_float_btn{
+        top: 84%;
+    }
     .gallery_content{
         position:unset;
     }
@@ -374,12 +409,17 @@ footer{
     }
     .promo_mask{
         width: 100%;
-        height: 200px;
+        height: 168px;
     }
     .main_mask{
         opacity: .7;
     }
     .tabcontent{
         padding: 0;
+    }
+    .tab_wrapper{
+        position: sticky;
+        top: 90px;
+        display: inline-block;
     }
 }
