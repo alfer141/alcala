@@ -261,7 +261,19 @@
                 <div id="Olivenza" class="tabcontent">
                     <div class="flex flex-wrap">
                         <div class="w-50-ns w-100">
-                            <img src="/assets/images/planes.webp" alt="">
+                            <div class="splide" id="slider3">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/f_olivenza.png" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/p_olivenza.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                           
                         </div>
                         <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
@@ -844,7 +856,13 @@
                             padding: '0',
                         },
                     }
+                    
                 } ).mount();
+
+                new Splide( '#slider3', {
+                    type   : 'loop',
+                } ).mount();
+
             </script>
             <!-- SCRIPTS -->
             <script>

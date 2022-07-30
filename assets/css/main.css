@@ -278,7 +278,12 @@ nav ul li a{
     overflow: hidden;
     box-shadow: 4px 12px 32px 0 rgba(0,0,0,0.12);
     background-color: #fff;
-    width: auto;
+    width: 100%;
+    position: sticky;
+     top: 90px;
+    display: block;
+    position: -webkit-sticky;
+    z-index: 99;
 
   }
   
