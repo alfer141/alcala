@@ -265,10 +265,10 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img src="/assets/images/models/f_olivenza.png" alt="">
+                                            <img src="/assets/images/models/f_olivenza.webp" alt="">
                                         </li>
                                         <li class="splide__slide">
-                                            <img src="/assets/images/models/p_olivenza.png" alt="">
+                                            <img src="/assets/images/models/p_olivenza.webp" alt="">
                                         </li>
                                     </ul>
                                 </div>
@@ -383,7 +383,18 @@
                 <div id="Montesino" class="tabcontent">
                     <div class="flex flex-wrap">
                         <div class="w-50-ns w-100">
-                            <img src="/assets/images/planes.webp" alt="">
+                            <div class="splide" id="slider4">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/f_montesino.webp" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/p_montesino.webp" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
@@ -493,7 +504,18 @@
                 <div id="Pontevel" class="tabcontent">
                     <div class="flex flex-wrap">
                         <div class="w-50-ns w-100">
-                            <img src="/assets/images/planes.webp" alt="">
+                            <div class="splide" id="slider5">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/f_pontevelo.webp" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/p_pontevelo.webp" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="w-50-ns w-100 model_info_wrapper pa4">
                             <span class="acent">Conoce el</span>
@@ -602,7 +624,18 @@
                 <div id="Scordia" class="tabcontent">
                     <div class="flex flex-wrap">
                         <div class="w-50-ns w-100">
-                            <img src="/assets/images/planes.webp" alt="">
+                            <div class="splide" id="slider6">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/f_scordia.webp" alt="">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="/assets/images/models/p_scordia.webp" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="w-50-ns w-100 model_info_wrapper pa5-ns pa4">
                             <span class="acent">Conoce el</span>
@@ -712,8 +745,7 @@
                                     ubicación. Las imágenes son ilustrativas.</p>
                             </div>
                         </div>
-                    </div>
-                    
+                    </div>    
                 </div>
 
             </section>
@@ -860,6 +892,15 @@
                 } ).mount();
 
                 new Splide( '#slider3', {
+                    type   : 'loop',
+                } ).mount();
+                new Splide( '#slider4', {
+                    type   : 'loop',
+                } ).mount();
+                new Splide( '#slider5', {
+                    type   : 'loop',
+                } ).mount();
+                new Splide( '#slider6', {
                     type   : 'loop',
                 } ).mount();
 
