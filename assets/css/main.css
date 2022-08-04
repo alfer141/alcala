@@ -353,20 +353,21 @@ nav ul li a{
     border-radius: .5rem;
 
 }
+.play_location{
+    position: absolute;
+    z-index: 999;
+    left: 45%;
+    top: 30%;
+}
 .contact{
     background-color: var(--light-gray);
     color: var(--darkgray);
 }
-.location-btn{
-    position: absolute;
-    top: 38%;
-    right: 45%;
-    z-index: 90;
-}
+
 .label{
     background-color: var(--acent);
     clip-path: polygon(95% 0%, 100% 48%, 95% 100%, 0 100%, 10% 49%, 0 0);
-    color: var()--white;
+    color: var(--white);
 }
 .mapbox{
 width: 100%;
