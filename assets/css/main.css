@@ -383,6 +383,19 @@ border-radius: 1rem;
     border: 2px solid #E2E2E2;
     border-radius: .2rem;
     background-color: var(--white);
+    width: 100%;
+    padding: .5rem .3rem;
+    margin-bottom: .5rem;
+    font-size: 14px;
+}
+.hs_recaptcha{
+    margin-top: 1rem;
+}
+.form_card textarea{
+    width: 100%;
+    border: 2px solid #E2E2E2;
+    border-radius: .2rem;
+    font-size: 14px;
 }
 .form_card form {
     margin: 0 auto;
@@ -394,6 +407,18 @@ border-radius: 1rem;
     color: #7B7B7B;
     font-weight: 600;
     margin-bottom: .375rem;
+}
+.form_card input[type=submit] {
+    background-color: #019B9E;
+    color: white;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--acent);
+    padding: .5rem .3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
 }
 .submit_btn {
     outline: none;
